@@ -1,0 +1,30 @@
+@media (max-width: 999px) {
+    body {
+        background-color: rgb(20,20,20);
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: grid;
+        grid-template-areas:
+            "Top"
+            "Content"
+            "Content2";
+    }
+    
+    .topBar {
+        margin: auto;
+        display: grid;
+        grid-area: Top;
+        grid-template-areas:
+        "name"
+        "to1"
+        "to2"
+        "to3"
+        "to4";
+    }
+
+    .project {
+        -ms-transform: translate(-0%, -0%);
+        transform: translate(-0%, 60%);
+    }
+}

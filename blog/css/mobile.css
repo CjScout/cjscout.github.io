@@ -7,8 +7,8 @@
         display: grid;
         grid-template-areas:
             "Top"
-            "Content"
-            "Content2";
+            "Content2"
+            "Content";
     }
     
     .topBar {
@@ -22,4 +22,9 @@
         "to3"
         "to4";
     }
+
+    .content {
+        padding-top: 10%;
+    }
+
 }

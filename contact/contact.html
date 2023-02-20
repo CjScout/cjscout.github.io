@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connor Schuler | Home</title>
+        <link href="./css/contact/base.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/contact/ultrawide.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/contact/standard.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/contact/mobile.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/contact/capatcha.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div class="topBar">
+            <h1 class="name">Connor Schuler</h1>
+            <a href="index.html"><h2 class="to1">Home</h2></a>
+            <a href="blog\blog.html"><h2 class="to2">Blog</h2></a>
+            <a href="projects\projects.html"><h2 class="to3">Projects</h2></a>
+            <a href="contact\contact.html"><h2 class="to4">Contact</h2></a>
+        </div>
+
+        <div class="center">
+            <h1 id="captchaHeading">
+                Please complete this basic CAPTCHA test to see my email.
+            </h1>
+            <div id="captchaBackground">
+                <canvas id="captcha">captcha text</canvas>
+                <input id="textBox" type="text" name="text">
+                <div id="buttons">
+                    <input id="submitButton" type="submit">
+                    <button id="refreshButton" type="submit">Refresh</button>
+                </div>
+            </div>
+            <a href="mailto:connor.schuler.2025@gmail.com"><h2 id="output"></h2></a>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

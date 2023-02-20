@@ -18,8 +18,4 @@
         grid-template-areas:
         "name to1 to2 to3 to4 spacer spacer spacer spacer spacer spacer spacer spacer spacer spacer spacer spacer spacer spacer spacer";
     }
-
-    .para {
-        width: 60%;
-    }
 }

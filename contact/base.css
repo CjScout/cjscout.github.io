@@ -80,8 +80,3 @@ a:active { text-decoration: none; color: rgb(50,100,50); }
     height: 50%;
     width: 50%;
 }
-
-.project {
-    -ms-transform: translate(-0%, -0%);
-    transform: translate(-0%, 150%);
-}
