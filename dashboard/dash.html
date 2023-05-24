@@ -35,31 +35,29 @@
       var credential = response.credential;
       
       // Load Google APIs
-      gapi.load('client:auth2', initGoogleAPIs);
-    }
-    
-    function initGoogleAPIs() {
-      gapi.client.init({
-        clientId: '890079625525-6alpvv95rigf3ijdqglc9l5o5olc3ijs.apps.googleusercontent.com',
-        scope: 'https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/tasks.readonly https://www.googleapis.com/auth/drive.metadata.readonly'
-      }).then(function() {
-        // Google APIs initialized successfully
-        loadCalendarEvents();
-        loadTasks();
-        loadDriveFiles();
-      }).catch(function(error) {
-        console.error('Error initializing Google APIs:', error);
+      gapi.load('client:auth2', {
+        callback: function() {
+          // Initialize Google APIs
+          gapi.auth2.init({
+            client_id: '890079625525-6ALPVV95RIGF3IJDQGLC9L5O5OLC3IJS.APPS.GOOGLEUSERCONTENT.COM',
+            fetch_basic_profile: false,
+            scope: 'https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/tasks.readonly https://www.googleapis.com/auth/drive.metadata.readonly'
+          }).then(function() {
+            // Google APIs initialized successfully
+            loadCalendarEvents();
+            loadTasks();
+            loadDriveFiles();
+          }).catch(function(error) {
+            console.error('Error initializing Google APIs:', error);
+          });
+        }
       });
     }
     
     function loadCalendarEvents() {
-      gapi.client.calendar.events.list({
-        'calendarId': 'primary',
-        'timeMin': (new Date()).toISOString(),
-        'showDeleted': false,
-        'singleEvents': true,
-        'maxResults': 5,
-        'orderBy': 'startTime'
+      gapi.client.request({
+        path: 'https://www.googleapis.com/calendar/v3/calendars/primary/events',
+        method: 'GET'
       }).then(function(response) {
         var events = response.result.items;
         
@@ -71,8 +69,9 @@
     }
     
     function loadTasks() {
-      gapi.client.tasks.tasks.list({
-        'tasklist': '@default'
+      gapi.client.request({
+        path: 'https://www.googleapis.com/tasks/v1/users/@me/lists/@default/tasks',
+        method: 'GET'
       }).then(function(response) {
         var tasks = response.result.items;
         
@@ -84,9 +83,13 @@
     }
     
     function loadDriveFiles() {
-      gapi.client.drive.files.list({
-        'pageSize': 5,
-        'fields': 'nextPageToken, files(id, name)'
+      gapi.client.request({
+        path: 'https://www.googleapis.com/drive/v3/files',
+        method: 'GET',
+        params: {
+          pageSize: 5,
+          fields: 'files(id, name)'
+        }
       }).then(function(response) {
         var files = response.result.files;
         
@@ -103,10 +106,10 @@
     <h1>Productivity Dashboard</h1>
     <p>Sign in with your G Suite account:</p>
     <div id="g_id_onload"
-         data-client_id="890079625525-6alpvv95rigf3ijdqglc9l5o5olc3ijs.apps.googleusercontent.com"
+         data-client_id="890079625525-6ALPVV95RIGF3IJDQGLC9L5O5OLC3IJS.APPS.GOOGLEUSERCONTENT.COM"
          data-callback="handleCredentialResponse">
     </div>
-    <button id="g_id_signin" onclick="google.accounts.signIn()">Sign In</button>
+    <button id="g_id_signin" onclick="google.accounts.id.initialize({client_id: '890079625525-6ALPVV95RIGF3IJDQGLC9L5O5OLC3IJS.APPS.GOOGLEUSERCONTENT.COM', callback: handleCredentialResponse}); google.accounts.id.prompt()">Sign In</button>
   </div>
 </body>
 </html>
