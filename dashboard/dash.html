@@ -33,95 +33,56 @@
     function handleCredentialResponse(response) {
       var credential = response.credential;
       
-      // Load the Calendar API client library
-      gapi.load('client', function() {
-        gapi.client.init({
-          apiKey: 'AIzaSyClfgsPkGngmxJWNQMCaOLulz2Yom64ePQ',
-          clientId: '890079625525-6alpvv95rigf3ijdqglc9l5o5olc3ijs.apps.googleusercontent.com',
-          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
-          scope: 'https://www.googleapis.com/auth/calendar.readonly'
-        }).then(function() {
-          // Google Calendar API initialized successfully
-          loadCalendarEvents();
-        }).catch(function(error) {
-          console.error('Error initializing Google Calendar API:', error);
+      fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + credential
+        }
+      })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          var events = data.items;
+          console.log('Calendar Events:', events);
+        })
+        .catch(function(error) {
+          console.error('Error loading calendar events:', error);
         });
-      });
       
-      // Load the Tasks API client library
-      gapi.load('client', function() {
-        gapi.client.init({
-          apiKey: 'AIzaSyClfgsPkGngmxJWNQMCaOLulz2Yom64ePQ',
-          clientId: '890079625525-6alpvv95rigf3ijdqglc9l5o5olc3ijs.apps.googleusercontent.com',
-          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/tasks/v1/rest'],
-          scope: 'https://www.googleapis.com/auth/tasks.readonly'
-        }).then(function() {
-          // Google Tasks API initialized successfully
-          loadTasks();
-        }).catch(function(error) {
-          console.error('Error initializing Google Tasks API:', error);
+      fetch('https://www.googleapis.com/tasks/v1/users/@me/lists/@default/tasks', {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + credential
+        }
+      })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          var tasks = data.items;
+          console.log('Tasks:', tasks);
+        })
+        .catch(function(error) {
+          console.error('Error loading tasks:', error);
         });
-      });
       
-      // Load the Drive API client library
-      gapi.load('client', function() {
-        gapi.client.init({
-          apiKey: 'AIzaSyClfgsPkGngmxJWNQMCaOLulz2Yom64ePQ',
-          clientId: '890079625525-6alpvv95rigf3ijdqglc9l5o5olc3ijs.apps.googleusercontent.com',
-          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
-          scope: 'https://www.googleapis.com/auth/drive.metadata.readonly'
-        }).then(function() {
-          // Google Drive API initialized successfully
-          loadDriveFiles();
-        }).catch(function(error) {
-          console.error('Error initializing Google Drive API:', error);
+      fetch('https://www.googleapis.com/drive/v3/files', {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + credential
+        }
+      })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          var files = data.files;
+          console.log('Drive Files:', files);
+        })
+        .catch(function(error) {
+          console.error('Error loading Drive files:', error);
         });
-      });
-    }
-    
-    function loadCalendarEvents() {
-      gapi.client.calendar.events.list({
-        'calendarId': 'primary',
-        'timeMin': (new Date()).toISOString(),
-        'showDeleted': false,
-        'singleEvents': true,
-        'maxResults': 5,
-        'orderBy': 'startTime'
-      }).then(function(response) {
-        var events = response.result.items;
-        
-        // Process the retrieved calendar events
-        console.log('Calendar Events:', events);
-      }).catch(function(error) {
-        console.error('Error loading calendar events:', error);
-      });
-    }
-    
-    function loadTasks() {
-      gapi.client.tasks.tasks.list({
-        'tasklist': '@default'
-      }).then(function(response) {
-        var tasks = response.result.items;
-        
-        // Process the retrieved tasks
-        console.log('Tasks:', tasks);
-      }).catch(function(error) {
-        console.error('Error loading tasks:', error);
-      });
-    }
-    
-    function loadDriveFiles() {
-      gapi.client.drive.files.list({
-        'pageSize': 5,
-        'fields': 'nextPageToken, files(id, name)'
-      }).then(function(response) {
-        var files = response.result.files;
-        
-        // Process the retrieved files
-        console.log('Drive Files:', files);
-      }).catch(function(error) {
-        console.error('Error loading Drive files:', error);
-      });
     }
   </script>
 </head>
