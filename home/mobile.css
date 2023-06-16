@@ -22,9 +22,4 @@
         "to3"
         "to4";
     }
-
-    .project {
-        -ms-transform: translate(-0%, -0%);
-        transform: translate(-0%, 60%);
-    }
 }

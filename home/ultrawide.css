@@ -20,11 +20,6 @@
     }
 
     .para {
-        width: 60%;
-    }
-
-    .project {
-        -ms-transform: translate(-0%, -0%);
-        transform: translate(-0%, 150%);
+        width: 50%;
     }
 }
