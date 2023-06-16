@@ -1,0 +1,23 @@
+@media (min-width: 1000px) {
+  
+    @media (max-width: 2349px) {
+        body {
+            background-color: rgb(20,20,20);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: grid;
+            grid-template-areas:
+                "Top Top"
+                "Content Content2";
+        }
+
+        .topBar {
+            margin: auto;
+            display: grid;
+            grid-area: Top;
+            grid-template-areas:
+            "name to1 to2 to3 to4 spacer spacer";
+        }  
+    }
+}
