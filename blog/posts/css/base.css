@@ -14,8 +14,8 @@ a:active { text-decoration: none; color: rgb(50,100,50); }
 
 .title {
     grid-area: Content;
-    text-align: center;
     color: white;
+    padding-left: 40px;
 }
 
 .sidet {
