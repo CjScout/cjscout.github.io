@@ -6,8 +6,8 @@
         padding-right: 30px;
         display: grid;
         grid-template-areas:
-            "Top Top"
-            "Content Content2";
+            "Top Top Top"
+            "Content Content2 Content3";
     }
 
     .topBar {
@@ -23,8 +23,7 @@
         width: 60%;
     }
 
-    .project {
-        -ms-transform: translate(-0%, -0%);
-        transform: translate(-0%, 150%);
+    .projects {
+        width: 70%;
     }
 }

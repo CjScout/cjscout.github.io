@@ -9,7 +9,8 @@
             display: grid;
             grid-template-areas:
                 "Top Top"
-                "Content Content2";
+                "Content Content2"
+                "Content3 Content4";
         }
 
         .topBar {

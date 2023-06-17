@@ -8,7 +8,9 @@
         grid-template-areas:
             "Top"
             "Content"
-            "Content2";
+            "Content2"
+            "Content3"
+            "Content4";
     }
     
     .topBar {
@@ -23,8 +25,5 @@
         "to4";
     }
 
-    .project {
-        -ms-transform: translate(-0%, -0%);
-        transform: translate(-0%, 60%);
-    }
+    
 }

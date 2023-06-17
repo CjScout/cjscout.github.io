@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-a:link { text-decoration: none; color: rgb(50,100,50); }
+.link:link { text-decoration: none; color: rgb(50,100,50); }
 
-a:visited { text-decoration: none; color: rgb(50,100,50); }
+.link:visited { text-decoration: none; color: rgb(50,100,50); }
 
-a:hover { text-decoration: underline; color: rgb(50,100,50); }
+.link:hover { text-decoration: underline; color: rgb(50,100,50); }
 
-a:active { text-decoration: none; color: rgb(50,100,50); }
+.link:active { text-decoration: none; color: rgb(50,100,50); }
 
 .content {
     grid-area: Content;
+    color: white;
+    padding: 40px;
+}
+
+.content2 {
+    grid-area: Content2;
+    color: white;
+    padding: 40px;
+}
+
+.clink {
+    color: white;
+    text-decoration: none;
+}
+
+.clink2 {
+    color: white;
+    text-decoration: none;
 }
 
 .project {
@@ -72,13 +90,4 @@ a:active { text-decoration: none; color: rgb(50,100,50); }
     font-family: "Roboto Mono", monospace;
     margin: auto;
     padding: 20px;
-}
-
-.box1, .box2, .box3 {
-    background-color: rgb(40,40,40);
-    text-align: center;
-    margin: auto;
-    color: rgb(50,100,50);
-    height: 50%;
-    width: 50%;
 }
