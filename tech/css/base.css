@@ -12,13 +12,13 @@ a:active { text-decoration: none; color: rgb(50,100,50); }
     grid-area: Content;
 }
 
-.sidebar {
-    grid-area: Content2;
-}
-
 .sidet {
     text-align: center;
     color: white;
+}
+
+.calendly-inline-widget {
+    grid-template-areas: Content2;
 }
 
 .para {

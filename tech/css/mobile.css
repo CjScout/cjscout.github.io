@@ -22,4 +22,9 @@
         "to3"
         "to4";
     }
+
+    .calendly-inline-widget {
+        min-width:150px;
+        height:900px;
+    }
 }

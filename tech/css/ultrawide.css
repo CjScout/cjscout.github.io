@@ -22,4 +22,9 @@
     .para {
         width: 40%;
     }
+
+    .calendly-inline-widget {
+        min-width:400px;
+        height:875px;
+    }
 }
