@@ -28,4 +28,12 @@
         min-width:150px;
         height:900px;
     }
+
+    h1, h2 {
+        font-size: 64px;
+    }
+
+    p {
+        font-size: 48px;
+    }
 }

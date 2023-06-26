@@ -22,4 +22,12 @@
         "to3"
         "to4";
     }
+
+    h1, h2 {
+        font-size: 64px;
+    }
+
+    p {
+        font-size: 48px;
+    }
 }
