@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
 import { StepperModule } from 'primeng/stepper';
 import { TooltipModule } from 'primeng/tooltip';
 import { DividerModule } from 'primeng/divider';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DividerModule } from 'primeng/divider';
     HomeComponent,
     BlogComponent,
     AboutComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

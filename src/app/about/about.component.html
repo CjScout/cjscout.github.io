@@ -1,16 +1,16 @@
-<p-stepper orientation="vertical">
+<p-stepper class="bg-primary-100" orientation="vertical">
 
     <p-stepperPanel header="Intro">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-            <div class="flex flex-column h-12rem">
-                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            <div class=" flex flex-column h-12rem">
+                <div class="bg-primary-100 border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
                     <p>Hi, I'm Connor Schuler. I'm a high school student and I spend more time than I'd care to admit in front of a computer. While I enjoy all aspects of computers, my favorites include video editing, programming, and IT work.</p>
                 </div>
             </div>
             <div class="flex py-4">
                 <p-button label="Next" (onClick)="nextCallback.emit()" />
-            </div
-        ></ng-template>
+            </div>
+        </ng-template>
     </p-stepperPanel>
 
     <p-stepperPanel header="Middle School">
