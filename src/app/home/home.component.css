@@ -1,3 +1,13 @@
 .reference {
     font-size: small;
+    text-align: center;
+}
+
+.hometext {
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    width: 60%;
 }
