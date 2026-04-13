@@ -1,22 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/lara-dark-teal/theme.css";
+@import "primeng/resources/themes/lara-dark-green/theme.css";
 @import "primeng/resources/primeng.css";
 
 html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0a0a0a;
+    color: #33ff33;
+    font-family: 'Courier New', 'Lucida Console', 'Consolas', monospace;
 }
 
 a {
-    color: #14b8a6;
+    color: #00ff41;
     text-decoration: none;
 }
 
 a:hover {
-    color: #5eead4;
+    color: #66ff66;
     text-decoration: underline;
+}
+
+::selection {
+    background: #00ff41;
+    color: #0a0a0a;
 }

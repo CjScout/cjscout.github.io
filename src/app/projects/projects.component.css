@@ -4,6 +4,41 @@
 }
 
 .projects-header h2 {
-    color: #14b8a6;
+    color: #00ff41;
     font-size: 2rem;
+    text-shadow: 0 0 6px rgba(0, 255, 65, 0.3);
+}
+
+:host ::ng-deep .p-card {
+    background-color: #0d0d0d;
+    border: 1px solid #00ff41;
+    border-radius: 4px;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+:host ::ng-deep .p-card:hover {
+    box-shadow: 0 0 16px rgba(0, 255, 65, 0.25);
+}
+
+:host ::ng-deep .p-card .p-card-title {
+    color: #00ff41;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    font-size: 1.1rem;
+}
+
+:host ::ng-deep .p-card .p-card-subtitle {
+    color: #4d994d;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+}
+
+:host ::ng-deep .p-card .p-card-content p {
+    color: #88cc88;
+    line-height: 1.6;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+}
+
+:host ::ng-deep .p-card .p-card-footer a {
+    text-decoration: none;
 }

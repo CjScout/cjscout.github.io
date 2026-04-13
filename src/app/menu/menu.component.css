@@ -1,16 +1,18 @@
 .topBar {
     text-align: center;
     padding: 1.5rem 1rem;
-    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-    border-bottom: 2px solid #14b8a6;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #00ff41;
 }
 
 .site-title {
     font-size: 2.5rem;
-    color: #14b8a6;
+    color: #00ff41;
     margin: 0 0 0.75rem 0;
     font-weight: 700;
-    letter-spacing: 1px;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
 }
 
 .nav-links {
