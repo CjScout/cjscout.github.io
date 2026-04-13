@@ -1,0 +1,9 @@
+.projects-header {
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
+.projects-header h2 {
+    color: #14b8a6;
+    font-size: 2rem;
+}
