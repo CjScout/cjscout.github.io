@@ -3,7 +3,11 @@
     "allow": [
       "WebFetch(domain:connorthenetworkjester.net)",
       "WebFetch(domain:cjscout.github.io)",
-      "WebFetch(domain:web.archive.org)"
+      "WebFetch(domain:web.archive.org)",
+      "Bash(node_modules/.bin/ng version:*)",
+      "Bash(npm view:*)",
+      "Bash(node_modules/.bin/ng update:*)",
+      "Bash(node_modules/.bin/ng build:*)"
     ]
   }
 }
