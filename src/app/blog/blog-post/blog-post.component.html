@@ -5,7 +5,7 @@
         <p class="post-date">{{ post.date }}</p>
         <ng-container *ngFor="let block of post.body">
             <h3 *ngIf="isHeading(block)" class="article-heading">{{ block.heading }}</h3>
-            <p *ngIf="!isHeading(block)">{{ block }}</p>
+            <p *ngIf="!isHeading(block)"><ng-container *ngFor="let seg of segments(block)"><a *ngIf="isLink(seg); else plain" [href]="seg.href" target="_blank" rel="noopener noreferrer">{{ seg.text }}</a><ng-template #plain>{{ seg.text }}</ng-template></ng-container></p>
         </ng-container>
     </div>
 </div>
