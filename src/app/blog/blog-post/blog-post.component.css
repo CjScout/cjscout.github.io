@@ -1,0 +1,37 @@
+.article {
+    max-width: 800px;
+    width: 90%;
+    padding: 2rem 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.article h2 {
+    color: #00ff41;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 0 6px rgba(0, 255, 65, 0.3);
+}
+
+.post-date {
+    color: #4d994d;
+    font-size: 0.85rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.article p {
+    line-height: 1.7;
+    color: #88cc88;
+    margin-bottom: 1rem;
+}
+
+.article-heading {
+    color: #00ff41;
+    font-size: 1.4rem;
+    margin: 2rem 0 0.75rem 0;
+    text-shadow: 0 0 6px rgba(0, 255, 65, 0.3);
+}

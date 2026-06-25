@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { blogPosts, BlogPost } from './blog-posts';
 
 @Component({
     selector: 'app-blog',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class BlogComponent {
-
+    posts: BlogPost[] = blogPosts;
 }

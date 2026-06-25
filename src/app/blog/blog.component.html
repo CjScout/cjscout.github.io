@@ -1,19 +1,12 @@
+<div class="blog-header">
+    <h2>Blog</h2>
+</div>
 <div class="flex justify-content-center">
-    <div class="blog-content text-300">
-        <h2>Blog</h2>
-
-        <p-accordion>
-            <p-accordionTab header="The Broken Technology Industry — 6-16-23">
-                <p>The technology industry has shifted from easily repairable devices to highly integrated, unrepairable hardware. This change creates three main problems: increased electronic waste, higher consumer spending, and reduced competition.</p>
-                <p>Consider an iPhone screen replacement costing $400 — contrast that with how accessible automobile repair is. Fifteen years ago, device circuits and designs were openly documented, enabling consumer repairs and competition among repair shops. Modern devices use complex integration and gluing techniques requiring specialized tools, making basic repairs like screen or battery replacement difficult.</p>
-                <p>Corporations like Apple cite security concerns about unauthorized repairs and data theft risks. However, the Federal Trade Commission found little to no evidence to support these claims regarding security justifications.</p>
-                <p>Framework Inc stands as a counterexample — a startup building upgradeable, repairable laptops despite industry skepticism. Founded by Nirav Patel, a former Apple engineer and Oculus hardware lead, Framework succeeded through media coverage from outlets like CNET and Linus Tech Tips.</p>
-                <p>Media pressure and regulatory action — such as President Biden's executive order and EU USB-C legislation — can restore consumer repair rights. The right to repair is not just a consumer convenience issue; it's an environmental and economic imperative.</p>
-            </p-accordionTab>
-
-            <p-accordionTab header="First Post — 2-19-23">
-                <p>Welcome to my first post! I'm not sure what to talk about honestly...</p>
-            </p-accordionTab>
-        </p-accordion>
+    <div class="blog-list">
+        <a *ngFor="let post of posts" class="blog-list-item" [routerLink]="['/blog', post.slug]">
+            <h3>{{ post.title }}</h3>
+            <p class="post-date">{{ post.date }}</p>
+            <p class="post-summary">{{ post.summary }}</p>
+        </a>
     </div>
 </div>
