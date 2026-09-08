@@ -70,3 +70,18 @@
     font-size: 0.85rem;
     margin: 0 0 0.25rem 0;
 }
+
+.pgp-key {
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+.pgp-key a {
+    color: #00ff41;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.pgp-key a:hover {
+    text-decoration: underline;
+}
