@@ -30,8 +30,9 @@ export class ProjectsComponent implements OnInit {
 
     // Fallback entry point for anyone who declined the intro modal — the
     // modal only shows once per session, so without this, a decline would
-    // otherwise lock a visitor out of the room entirely.
+    // otherwise lock a visitor out of the room entirely. Re-shows the same
+    // briefing rather than activating the ARG outright.
     startRoom(): void {
-        this.argState.activateArg();
+        this.argState.requestBriefing();
     }
 }

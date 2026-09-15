@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, effect, OnInit, signal } from '@angular/core';
 import { ArgStateService } from '../arg-state.service';
 
 @Component({
@@ -11,7 +11,16 @@ export class IntroModalComponent implements OnInit {
   readonly visible = signal(false);
   readonly dismissed = signal(false);
 
-  constructor(public argState: ArgStateService) {}
+  constructor(public argState: ArgStateService) {
+    // A page (e.g. Projects' "Start the Room" button) can ask this
+    // singleton modal to show the briefing on demand, rather than
+    // activating the ARG directly and skipping it.
+    effect(() => {
+      if (this.argState.briefingRequested()) {
+        this.visible.set(true);
+      }
+    });
+  }
 
   ngOnInit(): void {
     // Small delay so it reads as an incoming transmission, not a page-load
@@ -28,11 +37,13 @@ export class IntroModalComponent implements OnInit {
 
   accept(): void {
     this.argState.activateArg();
+    this.argState.acknowledgeBriefing();
     this.visible.set(false);
   }
 
   dismiss(): void {
     this.dismissed.set(true);
+    this.argState.acknowledgeBriefing();
     this.visible.set(false);
   }
 }

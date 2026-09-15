@@ -27,6 +27,11 @@ export class ArgStateService {
   readonly fragments = signal<Record<'a' | 'b' | 'c', string | null>>({ a: null, b: null, c: null });
   readonly visitedRoutes = signal<string[]>([]);
 
+  // Lets a component outside the intro modal's own auto-show timer (e.g. the
+  // Projects page "Start the Room" button) ask the modal to display the
+  // briefing, instead of activating the ARG directly and skipping it.
+  readonly briefingRequested = signal(false);
+
   // Number of elements solved — drives the "Case File" nav item's badge and
   // gives components a simple progress readout without recomputing a set size.
   readonly stage = computed(() => this.unlocked().size);
@@ -85,6 +90,16 @@ export class ArgStateService {
 
   isUnlocked(id: number): boolean {
     return this.unlocked().has(id);
+  }
+
+  /** Asks the (single, app-root-mounted) intro modal to show the briefing. */
+  requestBriefing(): void {
+    this.briefingRequested.set(true);
+  }
+
+  /** Called by the intro modal once it has responded to a requested briefing. */
+  acknowledgeBriefing(): void {
+    this.briefingRequested.set(false);
   }
 
   /** Element 10: accepting the intro modal is what turns the ARG on. */
