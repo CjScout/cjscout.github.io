@@ -1,0 +1,22 @@
+@if (visible()) {
+  <div class="modal-backdrop">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="intro-modal-title">
+      <div class="modal-eyebrow">INCOMING BRIEFING — GAME MASTER GM-7</div>
+      <h2 id="intro-modal-title">Room Briefing</h2>
+      <p class="typed">
+        Every escape room needs a game master — someone who built the room, watches the cameras, and
+        knows exactly which prop is actually a key. That's me. I built this one into my own site.
+      </p>
+      <p class="typed">
+        Cybersecurity and digital forensics are what I study, so that's what the room is built out of —
+        access logs, checksums, containment windows, the stuff I actually work with. Consider it a
+        practical exam nobody assigned me.
+      </p>
+      <p class="typed prompt-line">Want to start the room?</p>
+      <div class="modal-actions">
+        <button type="button" class="btn-accept" (click)="accept()">START THE ROOM</button>
+        <button type="button" class="btn-dismiss" (click)="dismiss()">NOT YET</button>
+      </div>
+    </div>
+  </div>
+}

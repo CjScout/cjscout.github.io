@@ -7,6 +7,10 @@
             <h3 *ngIf="isHeading(block)" class="article-heading">{{ block.heading }}</h3>
             <p *ngIf="!isHeading(block)"><ng-container *ngFor="let seg of segments(block)"><a *ngIf="isLink(seg); else plain" [href]="seg.href" target="_blank" rel="noopener noreferrer">{{ seg.text }}</a><ng-template #plain>{{ seg.text }}</ng-template></ng-container></p>
         </ng-container>
+
+        @if (post.slug === 'first-post' && argState.argActive()) {
+            <a routerLink="/signal-noise" class="anomaly-link">⚠ ANOMALY DETECTED — investigate</a>
+        }
     </div>
 </div>
 

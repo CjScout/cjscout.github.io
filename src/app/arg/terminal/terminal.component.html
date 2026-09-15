@@ -1,0 +1,37 @@
+<div class="term-wrap">
+    <div class="term-content">
+        <p class="eyebrow">SECURE TERMINAL — CONVERGENCE CHECK</p>
+        <h2>Assemble the Passphrase</h2>
+        <p class="intro">Three fragments, three locations. Order doesn't matter — I just need all three, together.</p>
+
+        <div class="fragment-row">
+            <span class="frag" [class.found]="argState.fragments().a">{{ argState.fragments().a || '? ? ? ? ? ?' }}</span>
+            <span class="frag" [class.found]="argState.fragments().b">{{ argState.fragments().b || '? ? ? ? ? ? ? ?' }}</span>
+            <span class="frag" [class.found]="argState.fragments().c">{{ argState.fragments().c || '? ? ? ? ?' }}</span>
+        </div>
+
+        <div class="input-row">
+            <span class="prompt">&gt;</span>
+            <input
+                type="text"
+                [ngModel]="input()"
+                (ngModelChange)="input.set($event)"
+                (keyup.enter)="submit()"
+                placeholder="enter passphrase"
+                autocomplete="off"
+                spellcheck="false"
+            />
+        </div>
+
+        <button type="button" class="submit-btn" (click)="submit()">VERIFY</button>
+
+        @if (status() === 'wrong') {
+            <p class="status status-wrong">HASH MISMATCH. Try again.</p>
+        }
+        @if (argState.isUnlocked(3)) {
+            <p class="status status-right">HASH CONFIRMED. File 03 closed. A door just unlocked — it isn't behind this screen.</p>
+        }
+
+        <p class="return-line"><a routerLink="/home">&lt; return</a></p>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.rec-indicator {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    z-index: 900;
+}
+
+.rec-indicator.logged {
+    border-color: #00ff41;
+    color: #00ff41;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff3333;
+    animation: blink 1.4s infinite;
+}
+
+.logged .dot {
+    background: #00ff41;
+    animation: none;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.15; }
+}
+
+.terminal-access-btn {
+    position: fixed;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: #0d0d0d;
+    border: 1px solid #00ff41;
+    color: #00ff41 !important;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.2);
+    z-index: 900;
+}
+
+.terminal-access-btn:hover {
+    background: #00ff41;
+    color: #0a0a0a !important;
+}

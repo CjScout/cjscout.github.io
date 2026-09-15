@@ -1,0 +1,8 @@
+@if (argState.argActive()) {
+  <div class="rec-indicator" [class.logged]="argState.isUnlocked(8)" [title]="argState.visitedRoutes().length + ' routes logged'">
+    <span class="dot"></span>
+    <span class="label">{{ argState.isUnlocked(8) ? 'TRAIL LOGGED' : 'REC' }}</span>
+  </div>
+
+  <a routerLink="/the-terminal" class="terminal-access-btn">▸ TERMINAL</a>
+}

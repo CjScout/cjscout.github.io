@@ -18,9 +18,16 @@
 .nav-links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
     gap: 1rem;
 }
 
 .button {
     padding: 0;
+}
+
+.case-file-button ::ng-deep .p-button {
+    border-color: #ff3333;
+    color: #ff3333;
 }

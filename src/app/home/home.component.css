@@ -85,3 +85,76 @@
 .pgp-key a:hover {
     text-decoration: underline;
 }
+
+.arg-panel {
+    background: #0d0d0d;
+    border: 1px solid #00ff41;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.arg-eyebrow {
+    color: #4d994d;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin: 0 0 0.35rem 0;
+}
+
+.arg-hint {
+    color: #88cc88;
+    font-size: 0.85rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.arg-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #050505;
+    border: 1px solid #1a3a1a;
+    border-radius: 4px;
+    padding: 0.4rem 0.7rem;
+    flex-wrap: wrap;
+}
+
+.arg-input-row .prompt {
+    color: #00ff41;
+    font-weight: 700;
+}
+
+.arg-input-row input {
+    flex: 1;
+    min-width: 120px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff41;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.arg-input-row button {
+    font-family: inherit;
+    background: #00ff41;
+    color: #0a0a0a;
+    border: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.arg-success {
+    color: #00ff41;
+    font-size: 0.85rem;
+    margin: 0.6rem 0 0 0;
+}
+
+.arg-fail {
+    color: #ff6666;
+    font-size: 0.85rem;
+    margin: 0.6rem 0 0 0;
+}
+

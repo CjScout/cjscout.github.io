@@ -1,0 +1,146 @@
+.cf-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+}
+
+.cf-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.eyebrow {
+    color: #4d994d;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.cf-header h2 {
+    color: #00ff41;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+    margin: 0.25rem 0 0.25rem 0;
+}
+
+.progress {
+    color: #4d994d;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.notes-toggle, .reset-btn {
+    font-family: inherit;
+    background: transparent;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.notes-toggle {
+    border: 1px solid #4d994d;
+    color: #4d994d;
+}
+
+.notes-toggle:hover {
+    border-color: #00ff41;
+    color: #00ff41;
+}
+
+.reset-btn {
+    border: 1px solid #663333;
+    color: #995555;
+}
+
+.reset-btn:hover {
+    border-color: #ff3333;
+    color: #ff3333;
+}
+
+.empty {
+    text-align: center;
+    color: #4d994d;
+}
+
+.entries {
+    columns: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 760px) {
+    .entries {
+        columns: 2;
+    }
+}
+
+.entry {
+    background: #0d0d0d;
+    border: 1px solid #1a3a1a;
+    border-left: 3px solid #00ff41;
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px dashed #1a3a1a;
+    padding-bottom: 0.5rem;
+}
+
+.entry-header h3 {
+    color: #00ff41;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.stamp {
+    color: #336633;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+}
+
+.field {
+    margin-bottom: 0.85rem;
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+.field p {
+    color: #88cc88;
+    line-height: 1.65;
+    margin: 0.15rem 0 0 0;
+}
+
+.tag {
+    display: inline-block;
+    color: #0a0a0a;
+    background: #00ff41;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+}
+
+.return-line {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+}

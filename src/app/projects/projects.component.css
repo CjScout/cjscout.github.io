@@ -42,3 +42,50 @@
 :host ::ng-deep .p-card .p-card-footer a {
     text-decoration: none;
 }
+
+:host ::ng-deep .p-card.anomaly-card {
+    border-color: #00ff41;
+    animation: anomaly-pulse 2s ease-in-out infinite;
+}
+
+:host ::ng-deep .p-card.anomaly-card .p-card-title {
+    color: #66ff66;
+}
+
+@keyframes anomaly-pulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(0, 255, 65, 0.15); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 65, 0.5); }
+}
+
+:host ::ng-deep .p-card.signal-card {
+    border-style: dashed;
+}
+
+:host ::ng-deep .p-card.signal-card .p-card-subtitle {
+    font-style: italic;
+}
+
+.decrypted-text {
+    color: #ffcc00 !important;
+}
+
+.decrypted-text strong {
+    color: #ffdd44;
+}
+
+.decrypt-trigger {
+    font-family: inherit;
+    background: transparent;
+    border: 1px dashed #4d994d;
+    color: #4d994d;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.decrypt-trigger:hover {
+    border-color: #ffcc00;
+    color: #ffcc00;
+}

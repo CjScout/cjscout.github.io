@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { blogPosts, BlogPost, ContentBlock } from '../blog-posts';
+import { ArgStateService } from '../../arg/arg-state.service';
 
 // A run of paragraph text: either plain text or a clickable web link.
 export type TextSegment =
@@ -19,7 +20,10 @@ const LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s]+)/g
 export class BlogPostComponent {
     post?: BlogPost;
 
-    constructor(private route: ActivatedRoute) {
+    constructor(
+        private route: ActivatedRoute,
+        public argState: ArgStateService,
+    ) {
         const slug = this.route.snapshot.paramMap.get('slug');
         this.post = blogPosts.find(p => p.slug === slug);
     }

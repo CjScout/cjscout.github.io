@@ -1,0 +1,84 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-box {
+    background: #0d0d0d;
+    border: 1px solid #00ff41;
+    box-shadow: 0 0 24px rgba(0, 255, 65, 0.25);
+    max-width: 520px;
+    width: 100%;
+    padding: 1.75rem;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+}
+
+.modal-eyebrow {
+    color: #4d994d;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.modal-box h2 {
+    color: #00ff41;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
+}
+
+.typed {
+    color: #88cc88;
+    line-height: 1.6;
+    margin: 0 0 0.9rem 0;
+}
+
+.prompt-line {
+    color: #00ff41;
+}
+
+.prompt-line::before {
+    content: "> ";
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.btn-accept, .btn-dismiss {
+    font-family: inherit;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-accept {
+    background: #00ff41;
+    color: #0a0a0a;
+    border: 1px solid #00ff41;
+    font-weight: 700;
+}
+
+.btn-accept:hover {
+    background: #33ff33;
+}
+
+.btn-dismiss {
+    background: transparent;
+    color: #4d994d;
+    border: 1px solid #333;
+}
+
+.btn-dismiss:hover {
+    color: #88cc88;
+    border-color: #4d994d;
+}

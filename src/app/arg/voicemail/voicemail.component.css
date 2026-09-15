@@ -1,0 +1,79 @@
+.vm-wrap {
+    min-height: calc(100vh - 120px);
+    background: #0a0000;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.vm-content {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+}
+
+.static-line {
+    color: #4d1a1a;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.vm-content h2 {
+    color: #ff3333;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.4);
+    margin-bottom: 1.5rem;
+}
+
+.transcript {
+    text-align: left;
+    background: #140505;
+    border: 1px solid #4d1a1a;
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.transcript p {
+    color: #cc8888;
+    line-height: 1.7;
+    margin: 0 0 0.75rem 0;
+}
+
+.transcript strong {
+    color: #ff6666;
+}
+
+.hiss {
+    color: #663333 !important;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.ack-btn {
+    font-family: inherit;
+    background: transparent;
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.ack-btn:hover {
+    background: rgba(255, 51, 51, 0.1);
+}
+
+.confirm {
+    color: #ff6666;
+}
+
+.return-line {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.return-line a {
+    color: #663333 !important;
+}

@@ -7,6 +7,9 @@
         <a href="https://wiki.connorthenetworkjester.net" target="_blank" rel="noopener noreferrer">
             <p-button class="button" label="Wiki"></p-button>
         </a>
+        @if (argState.stage() > 0) {
+            <p-button class="button case-file-button" routerLink="/case-file" routerLinkActive="active" ariaCurrentWhenActive="page" label="Case File ({{ argState.stage() }}/10)"></p-button>
+        }
     </nav>
 </div>
 <router-outlet />

@@ -1,0 +1,52 @@
+<div class="cf-wrap">
+    <div class="cf-header">
+        <p class="eyebrow">GAME MASTER'S NOTES — PLAYER COPY</p>
+        <h2>Case File</h2>
+        <p class="progress">{{ argState.caseFile().length }} / 10 files recovered</p>
+
+        <div class="header-actions">
+            <button type="button" class="notes-toggle" (click)="toggleGmNotes()">
+                {{ gmNotes() ? 'HIDE GM NOTES' : 'SHOW GM NOTES' }}
+            </button>
+            <button type="button" class="reset-btn" (click)="resetRoom()">⟲ RESET THE ROOM</button>
+        </div>
+    </div>
+
+    @if (argState.caseFile().length === 0) {
+        <p class="empty">Nothing recovered yet. Whatever you've triggered so far hasn't produced anything worth filing.</p>
+    }
+
+    <div class="entries">
+        @for (entry of argState.caseFile(); track entry.id) {
+            <article class="entry">
+                <header class="entry-header">
+                    <h3>{{ entry.caseName }}</h3>
+                    <span class="stamp">RECOVERED {{ entry.unlockedAt | date:'short' }}</span>
+                </header>
+
+                <div class="field">
+                    @if (gmNotes()) { <span class="tag">TOOL / ELEMENT</span> }
+                    <p>{{ entry.toolElement }}</p>
+                </div>
+                <div class="field">
+                    @if (gmNotes()) { <span class="tag">SOURCE</span> }
+                    <p>{{ entry.source }}</p>
+                </div>
+                <div class="field">
+                    @if (gmNotes()) { <span class="tag">SIGNIFICANCE</span> }
+                    <p>{{ entry.significance }}</p>
+                </div>
+                <div class="field">
+                    @if (gmNotes()) { <span class="tag">DISCIPLINE(S)</span> }
+                    <p>{{ entry.disciplines }}</p>
+                </div>
+                <div class="field">
+                    @if (gmNotes()) { <span class="tag">INTEGRATION</span> }
+                    <p>{{ entry.integration }}</p>
+                </div>
+            </article>
+        }
+    </div>
+
+    <p class="return-line"><a routerLink="/home">&lt; return</a></p>
+</div>

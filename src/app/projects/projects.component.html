@@ -3,6 +3,36 @@
 </div>
 <div class="flex justify-content-center flex-wrap">
     <div class="flex p-3 align-items-stretch justify-content-center">
+        <p-card header="◈ Undocumented Feature" subheader="Not on the résumé" [style]="{ width: '360px' }" styleClass="signal-card">
+            @if (!argState.argActive()) {
+                <p>
+                    There's a room built into this site that isn't part of the portfolio copy. I built it myself — I just never got around to documenting it here.
+                </p>
+                <ng-template pTemplate="footer">
+                    <p-button label="Start the Room" icon="pi pi-search" (click)="startRoom()"></p-button>
+                </ng-template>
+            } @else {
+                <p>
+                    Already running. Check the corner of the screen for what it's logging.
+                </p>
+            }
+        </p-card>
+    </div>
+    @if (showUnlisted()) {
+        <div class="flex p-3 align-items-stretch justify-content-center">
+            <p-card header="◈ [UNLISTED]" subheader="A door just opened" [style]="{ width: '360px' }" styleClass="anomaly-card">
+                <p>
+                    This wasn't here a minute ago. Signal, acquired — put those together and apparently something opens.
+                </p>
+                <ng-template pTemplate="footer">
+                    <a routerLink="/the-void">
+                        <p-button label="Go Through" icon="pi pi-arrow-right"></p-button>
+                    </a>
+                </ng-template>
+            </p-card>
+        </div>
+    }
+    <div class="flex p-3 align-items-stretch justify-content-center">
         <p-card header="Database Reconciliation &amp; Anomaly Detection Tool" subheader="Fresenius Medical Care — IT Solution Intern" [style]="{ width: '360px' }">
             <p>
                 Python tool comparing an Oracle database against a Reltio MDM instance using rule-based checks and ML anomaly detection, with a severity ranking system visualized through Power BI.
@@ -46,9 +76,18 @@
     </div>
     <div class="flex p-3 align-items-stretch justify-content-center">
         <p-card header="connorthenetworkjester.net" subheader="Personal Website" [style]="{ width: '360px' }">
-            <p>
-                This website — custom-built from scratch using the Angular framework, PrimeNG component library, and PrimeFlex CSS utilities.
-            </p>
+            @if (!decrypted()) {
+                <p>
+                    This website — custom-built from scratch using the Angular framework, PrimeNG component library, and PrimeFlex CSS utilities.
+                </p>
+            } @else {
+                <p class="decrypted-text">
+                    Signal <strong>acquired</strong>. The framework and the libraries were never the point — the shell was always going to be the first thing I dressed. Fragment logged: ACQUIRED.
+                </p>
+            }
+            @if (argState.argActive() && !decrypted()) {
+                <button type="button" class="decrypt-trigger" (click)="decrypt()">◈ analyze</button>
+            }
         </p-card>
     </div>
     <div class="flex p-3 align-items-stretch justify-content-center">

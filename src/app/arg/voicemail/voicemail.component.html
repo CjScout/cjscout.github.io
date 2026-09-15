@@ -1,0 +1,22 @@
+<div class="vm-wrap">
+    <div class="vm-content">
+        <p class="static-line">— NO SIGNAL —</p>
+        <h2>Recording — Timestamp Corrupted</h2>
+
+        <div class="transcript">
+            <p class="hiss">[ static ]</p>
+            <p>"&hellip;copy that. Hold position, phase <strong>Delta</strong> confirmed."</p>
+            <p>"If contact drops, override is <strong>Nightshade</strong> &mdash; repeat, Nightshade. Do not use it before Delta clears."</p>
+            <p>"Once Delta clears, wrap up and get out. Do not wait for confirmation twice."</p>
+            <p class="hiss">[ transcript ends ]</p>
+        </div>
+
+        @if (!acknowledged()) {
+            <button type="button" class="ack-btn" (click)="acknowledge()">FLAG AS RELEVANT</button>
+        } @else {
+            <p class="confirm">Logged. Fragment recovered: <strong>DELTA</strong>. Override code noted for later.</p>
+        }
+
+        <p class="return-line"><a routerLink="/the-void">&lt; back to the empty room</a></p>
+    </div>
+</div>

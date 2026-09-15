@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,6 +12,15 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+
+// ARG components
+import { IntroModalComponent } from './arg/intro-modal/intro-modal.component';
+import { RecIndicatorComponent } from './arg/rec-indicator/rec-indicator.component';
+import { VoidComponent } from './arg/void/void.component';
+import { VoicemailComponent } from './arg/voicemail/voicemail.component';
+import { SignalNoiseComponent } from './arg/signal-noise/signal-noise.component';
+import { TerminalComponent } from './arg/terminal/terminal.component';
+import { CaseFileComponent } from './arg/case-file/case-file.component';
 
 // PrimeNG
 import { providePrimeNG } from 'primeng/config';
@@ -66,9 +76,17 @@ const TerminalGreen = definePreset(Lara, {
     ProjectsComponent,
     BlogComponent,
     BlogPostComponent,
+    IntroModalComponent,
+    RecIndicatorComponent,
+    VoidComponent,
+    VoicemailComponent,
+    SignalNoiseComponent,
+    TerminalComponent,
+    CaseFileComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ButtonModule,
     TooltipModule,

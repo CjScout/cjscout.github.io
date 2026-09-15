@@ -1,0 +1,114 @@
+.term-wrap {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.term-content {
+    max-width: 560px;
+    width: 100%;
+}
+
+.eyebrow {
+    color: #4d994d;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.term-content h2 {
+    color: #00ff41;
+    text-align: center;
+    margin: 0.25rem 0 1rem 0;
+}
+
+.intro {
+    color: #88cc88;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.fragment-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.frag {
+    border: 1px dashed #333;
+    color: #333;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.frag.found {
+    border: 1px solid #00ff41;
+    color: #00ff41;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0d0d0d;
+    border: 1px solid #00ff41;
+    border-radius: 4px;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.prompt {
+    color: #00ff41;
+    font-weight: 700;
+}
+
+.input-row input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff41;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    font-family: inherit;
+    background: #00ff41;
+    color: #0a0a0a;
+    border: 1px solid #00ff41;
+    font-weight: 700;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #33ff33;
+}
+
+.status {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.status-wrong {
+    color: #ff6666;
+}
+
+.status-right {
+    color: #00ff41;
+}
+
+.return-line {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+}

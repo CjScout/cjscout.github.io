@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { blogPosts, BlogPost } from './blog-posts';
+import { ArgStateService } from '../arg/arg-state.service';
 
 @Component({
     selector: 'app-blog',
@@ -9,4 +10,6 @@ import { blogPosts, BlogPost } from './blog-posts';
 })
 export class BlogComponent {
     posts: BlogPost[] = blogPosts;
+
+    constructor(public argState: ArgStateService) { }
 }

@@ -1,0 +1,40 @@
+<div class="pn-wrap">
+    <div class="pn-content">
+        <p class="classified">◆ RESTRICTED — CLEARANCE VERIFIED ◆</p>
+        <h2>Private Notes</h2>
+
+        @if (resolution() === 'pending') {
+            <div class="clock-box">
+                <p class="clock-label">This room stays open for:</p>
+                <p class="clock">00:{{ secondsLeft().toString().padStart(2, '0') }}</p>
+                <p class="clock-hint">Enter an override before it closes, or let it run out. Either one gets you through.</p>
+                <div class="bypass-row">
+                    <input
+                        type="text"
+                        [ngModel]="bypassInput()"
+                        (ngModelChange)="bypassInput.set($event)"
+                        (keyup.enter)="tryBypass()"
+                        placeholder="override code"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <button type="button" (click)="tryBypass()">SUBMIT</button>
+                </div>
+            </div>
+        } @else {
+            <div class="notes-body">
+                @if (resolution() === 'bypassed') {
+                    <p class="note-flag">Override accepted. Clock stopped.</p>
+                } @else {
+                    <p class="note-flag">Clock ran out. Door opened anyway — you didn't need the code, just the nerve to wait.</p>
+                }
+
+                <p>The room's built, tested, and — as of this run — actually finished by someone who isn't me. That was the point of putting it here: a portfolio bullet point can claim hands-on cybersecurity and forensics skills, or it can hand a stranger a locked door built out of exactly those skills and see if it holds.</p>
+                <p>It held. That's the note I'm actually filing.</p>
+                <p class="case-pointer">The rest of what I've logged on this run is in the Case File — it should be reachable from the menu now.</p>
+            </div>
+        }
+
+        <p class="return-line"><a routerLink="/home">&lt; return to the lit hallway</a></p>
+    </div>
+</div>

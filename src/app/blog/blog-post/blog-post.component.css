@@ -35,3 +35,15 @@
     margin: 2rem 0 0.75rem 0;
     text-shadow: 0 0 6px rgba(0, 255, 65, 0.3);
 }
+
+.anomaly-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #ff3333 !important;
+    font-size: 0.8rem;
+    text-decoration: none !important;
+}
+
+.anomaly-link:hover {
+    color: #ff6666 !important;
+}

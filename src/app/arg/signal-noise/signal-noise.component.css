@@ -1,0 +1,39 @@
+.noise-wrap {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.noise-content {
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+}
+
+.glitch {
+    color: #4d994d;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.noise-content h2 {
+    color: #00ff41;
+    margin-bottom: 1rem;
+}
+
+.noise-content p {
+    color: #88cc88;
+    line-height: 1.7;
+}
+
+.small {
+    font-size: 0.85rem;
+    color: #4d994d;
+}
+
+.return-line {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}

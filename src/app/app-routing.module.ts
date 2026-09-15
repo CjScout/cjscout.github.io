@@ -5,6 +5,12 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { VoidComponent } from './arg/void/void.component';
+import { VoicemailComponent } from './arg/voicemail/voicemail.component';
+import { SignalNoiseComponent } from './arg/signal-noise/signal-noise.component';
+import { TerminalComponent } from './arg/terminal/terminal.component';
+import { CaseFileComponent } from './arg/case-file/case-file.component';
+import { privateNotesGuard } from './arg/private-notes/private-notes.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -34,6 +40,20 @@ const routes: Routes = [
   },
   // Title/description for individual posts are set dynamically from the post in AppComponent.
   { path: 'blog/:slug', component: BlogPostComponent },
+
+  // ARG routes.
+  { path: 'the-void', component: VoidComponent },
+  { path: 'voicemail', component: VoicemailComponent },
+  { path: 'signal-noise', component: SignalNoiseComponent },
+  { path: 'the-terminal', component: TerminalComponent },
+  { path: 'case-file', component: CaseFileComponent },
+  {
+    path: 'private-notes',
+    canActivate: [privateNotesGuard],
+    loadComponent: () =>
+      import('./arg/private-notes/private-notes.component').then((m) => m.PrivateNotesComponent),
+  },
+
   {
     path: '**',
     component: ErrorPageComponent,

@@ -1,5 +1,33 @@
 <div class="flex justify-content-center">
     <div class="home-content">
+        @if (argState.argActive()) {
+            <div class="arg-panel">
+                <p class="arg-eyebrow">SIGNAL DISCIPLINE CHECK</p>
+                <p class="arg-hint">State the game master's callsign from the briefing.</p>
+                <div class="arg-input-row">
+                    <span class="prompt">&gt;</span>
+                    <input
+                        type="text"
+                        [ngModel]="cipherInput()"
+                        (ngModelChange)="cipherInput.set($event)"
+                        (keyup.enter)="submitCipher()"
+                        [disabled]="argState.isUnlocked(1)"
+                        placeholder="callsign"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    @if (!argState.isUnlocked(1)) {
+                        <button type="button" (click)="submitCipher()">VERIFY</button>
+                    }
+                </div>
+                @if (argState.isUnlocked(1)) {
+                    <p class="arg-success">ACCESS GRANTED. Fragment logged: SIGNAL. Whatever that opened, it isn't behind this screen — go look for it.</p>
+                } @else if (cipherWrong()) {
+                    <p class="arg-fail">Not recognized.</p>
+                }
+            </div>
+        }
+
         <h2>Hi, I'm Connor Schuler.</h2>
         <p class="subtitle">Second-Year Student at Champlain College | Computer Networking &amp; Cybersecurity | Computer &amp; Digital Forensics</p>
 
