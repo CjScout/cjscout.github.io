@@ -23,7 +23,7 @@ export type CaseFileTemplate = Omit<CaseFileEntry, 'unlockedAt'>;
 export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   1: {
     id: 1,
-    caseName: 'FILE 01 — SIGNAL DISCIPLINE',
+    caseName: 'FILE 01 — SIGNAL DISCIPLINE (THEME)',
     toolElement:
       "The whole site runs green-on-black, monospace, no decoration — the exact look of every terminal and NOC display I've actually worked on. That's not a portfolio color scheme. It's a room built out of the equipment I use, the same way a physical escape room dresses its set out of whatever the story needs. You confirmed you'd clocked it the moment you fed the prompt the right callsign.",
     source:
@@ -37,7 +37,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   2: {
     id: 2,
-    caseName: 'FILE 02 — THE VOID',
+    caseName: 'FILE 02 — THE VOID (PLACE)',
     toolElement:
       "You left the lit hallway and walked into a room with nothing in it. Same site, same router, but the terminal green drains out and the walls go dark red — like stepping off the monitored network onto an isolated, unmonitored segment. There's nothing to interact with except what I left on the floor.",
     source:
@@ -51,7 +51,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   3: {
     id: 3,
-    caseName: 'FILE 03 — CONVERGENCE',
+    caseName: 'FILE 03 — CONVERGENCE (MULTI-PIECE PUZZLE)',
     toolElement:
       "Three fragments, three rooms, none of them worth anything alone. You had to actually earn each one — decrypt a project entry, sit through a recording, talk the front page into giving up a callsign — before the combination meant anything. I hashed your answer the second you submitted it. No partial credit, no working backward from a guess.",
     source:
@@ -63,7 +63,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   4: {
     id: 4,
-    caseName: 'FILE 04 — THE RECORDING',
+    caseName: "FILE 04 — THE RECORDING (CHEKOV'S GUN)",
     toolElement:
       "The recording in the isolated room sounded like set dressing the first time through — a voice, some static, nothing you were told to remember. It wasn't set dressing. One phrase in that transcript does actual work later, and you didn't know which one until you needed it.",
     source:
@@ -76,7 +76,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   5: {
     id: 5,
-    caseName: 'FILE 05 — SIGNAL NOISE',
+    caseName: 'FILE 05 — SIGNAL NOISE (RED-HERRING)',
     toolElement:
       "I flagged an anomaly on the front page, loud enough that ignoring it felt like the wrong call. You followed it. It went nowhere — deliberately, cleanly nowhere — and told you as much on arrival.",
     source:
@@ -89,7 +89,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   6: {
     id: 6,
-    caseName: 'FILE 06 — FALSE FRONT',
+    caseName: 'FILE 06 — FALSE FRONT (DISGUISE)',
     toolElement:
       "One entry on the project list read exactly like the others — until you found the trigger that made it decrypt in front of you. What looked like a bullet point about a class project turned out to be a payload wearing that project's description as cover.",
     source:
@@ -102,7 +102,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   7: {
     id: 7,
-    caseName: 'FILE 07 — THE CLOCK',
+    caseName: 'FILE 07 — THE CLOCK (TIME-BASED PRESSURE)',
     toolElement:
       "Getting through the lock at File 09 only bought you a room with a clock running in it. Sixty seconds, counting down whether you read fast or not, with exactly one way to stop it early — and it wasn't patience.",
     source:
@@ -115,7 +115,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   8: {
     id: 8,
-    caseName: 'FILE 08 — THE TRAIL',
+    caseName: 'FILE 08 — THE TRAIL (SURVEILLANCE)',
     toolElement:
       'That indicator in the corner is not decoration. It has been logging every room you have entered since you started this exercise — home, the isolated segment, the dead end, all of it, timestamped, in order. You are as much a subject of this file as anything else on the site.',
     source:
@@ -128,7 +128,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   9: {
     id: 9,
-    caseName: 'FILE 09 — PRIVATE NOTES',
+    caseName: 'FILE 09 — PRIVATE NOTES (CONDITIONAL ACCESS)',
     toolElement:
       "This door didn't open because you asked. It's wired to check whether File 03's checksum actually cleared before the route resolves at all — no key, no room, no matter how directly you typed the address.",
     source:
@@ -140,7 +140,7 @@ export const CASE_FILE_TEMPLATES: Record<number, CaseFileTemplate> = {
   },
   10: {
     id: 10,
-    caseName: 'FILE 10 — THE BRIEFING',
+    caseName: 'FILE 10 — THE BRIEFING (HOOK/INTRO)',
     toolElement:
       "Before any of this had a name, a window opened over the page you thought you'd come here for, and I introduced myself as the person running the room. You didn't have to click start. You did.",
     source:
