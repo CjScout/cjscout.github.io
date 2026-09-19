@@ -64,6 +64,41 @@
     color: #ff3333;
 }
 
+.credits {
+    background: #0d0d0d;
+    border: 1px solid #1a3a1a;
+    border-left: 3px solid #4d994d;
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.credits h3 {
+    color: #00ff41;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.05rem;
+}
+
+.credits ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.credits li {
+    color: #88cc88;
+    line-height: 1.65;
+    margin-bottom: 0.6rem;
+}
+
+.credits li:last-child {
+    margin-bottom: 0;
+}
+
+.credits cite {
+    color: #00ff41;
+    font-style: italic;
+}
+
 .empty {
     text-align: center;
     color: #4d994d;

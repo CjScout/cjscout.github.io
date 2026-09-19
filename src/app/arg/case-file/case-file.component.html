@@ -8,9 +8,31 @@
             <button type="button" class="notes-toggle" (click)="toggleGmNotes()">
                 {{ gmNotes() ? 'HIDE GM NOTES' : 'SHOW GM NOTES' }}
             </button>
+            <button type="button" class="notes-toggle" (click)="toggleCredits()" [attr.aria-expanded]="credits()">
+                {{ credits() ? 'HIDE CREDITS' : 'CREDITS' }}
+            </button>
             <button type="button" class="reset-btn" (click)="resetRoom()">⟲ RESET THE ROOM</button>
         </div>
     </div>
+
+    @if (credits()) {
+        <section class="credits" aria-label="Credits">
+            <h3>Credits</h3>
+            <ul>
+                <li>
+                    <cite>Escape from Mr. Lemoncello's Library</cite> by Chris Grabenstein
+                    (Random House Books for Young Readers, 2013). Source of the book examples used throughout the case file.
+                </li>
+                <li>
+                    <cite>The Conversation</cite>, directed by Francis Ford Coppola
+                    (Paramount Pictures, 1974). Source of the film examples used throughout the case file.
+                </li>
+                <li>
+                    Claude, an AI model made by Anthropic, used through Claude Code for the code development of this project.
+                </li>
+            </ul>
+        </section>
+    }
 
     @if (argState.caseFile().length === 0) {
         <p class="empty">Nothing recovered yet. Whatever you've triggered so far hasn't produced anything worth filing.</p>

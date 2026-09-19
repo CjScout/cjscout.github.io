@@ -14,6 +14,10 @@ export class CaseFileComponent {
   // consistent with the escape-room conceit established elsewhere.
   readonly gmNotes = signal(false);
 
+  // Whether the credits panel is open. Starts closed so the case file itself
+  // stays the first thing a visitor sees.
+  readonly credits = signal(false);
+
   constructor(
     public argState: ArgStateService,
     private router: Router,
@@ -21,6 +25,10 @@ export class CaseFileComponent {
 
   toggleGmNotes(): void {
     this.gmNotes.set(!this.gmNotes());
+  }
+
+  toggleCredits(): void {
+    this.credits.set(!this.credits());
   }
 
   // Testing/playtesting convenience — wipes all room progress so a
