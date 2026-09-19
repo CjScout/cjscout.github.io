@@ -9,15 +9,15 @@ export interface CaseFileEntry {
   id: number;
   /** Short in-fiction case name shown as the entry's heading. */
   caseName: string;
-  /** Rubric field: Tool/Element — what escape-room mechanic the game master built here. */
+  /** Rubric field: Tool/Element — a short paragraph describing the escape-room element and how it appears here. */
   toolElement: string;
-  /** Rubric field: Source — what the game master cites as the basis/reference for it. */
+  /** Rubric field: Example — a specific example that illustrates the element, and how. (Key kept as `source` so saved progress still loads.) */
   source: string;
-  /** Rubric field: Significance — why the game master flags this as noteworthy. */
+  /** Rubric field: Significance — why the element matters when designing escape rooms. */
   significance: string;
-  /** Rubric field: Discipline(s) — what fields of expertise the game master says this draws on. */
+  /** Rubric field: Discipline(s) — the academic disciplines the element aligns with, and how it connects to each. */
   disciplines: string;
-  /** Rubric field: Integration — how the game master connects this to the wider room. */
+  /** Rubric field: Integration — whether the element is about control and surveillance, collaboration and trust, or both, and why. */
   integration: string;
   /** ISO timestamp string set at the moment the entry is unlocked. */
   unlockedAt: string;
