@@ -1,7 +1,30 @@
 .home-content {
-    max-width: 800px;
-    width: 90%;
+    max-width: 1100px;
+    width: 92%;
     padding: 2rem 1rem;
+}
+
+.profile-pic-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.profile-pic-circle {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #00ff41;
+    box-shadow: 0 0 16px rgba(0, 255, 65, 0.25);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1);
 }
 
 .home-content h2 {
@@ -42,6 +65,112 @@
     padding-left: 1.25rem;
 }
 
+/* Two-column grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+    align-items: start;
+}
+
+@media (max-width: 720px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-col {
+    min-width: 0;
+}
+
+/* Accordion styling */
+:host ::ng-deep .p-accordion {
+    border: none;
+    background: transparent;
+}
+
+:host ::ng-deep .p-accordionpanel {
+    border: none;
+    border-bottom: 1px solid #1a3a1a;
+    background: transparent;
+}
+
+:host ::ng-deep .p-accordionpanel:last-child {
+    border-bottom: none;
+}
+
+:host ::ng-deep .p-accordionheader {
+    background: transparent !important;
+    color: #88cc88;
+    padding: 0.6rem 0;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+:host ::ng-deep .p-accordionheader:hover {
+    color: #00ff41 !important;
+    background: transparent !important;
+}
+
+:host ::ng-deep .p-accordionheader[data-p-active="true"] {
+    color: #00ff41 !important;
+}
+
+:host ::ng-deep .p-accordionheader .p-accordionheader-toggle-icon {
+    color: #4d994d;
+    flex-shrink: 0;
+}
+
+:host ::ng-deep .p-accordioncontent-content {
+    background: transparent;
+    padding: 0.25rem 0 0.75rem 0.5rem;
+    color: #88cc88;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    border: none;
+}
+
+:host ::ng-deep .p-accordioncontent-content p,
+:host ::ng-deep .p-accordioncontent-content ul,
+:host ::ng-deep .p-accordioncontent-content li {
+    color: #88cc88;
+    line-height: 1.6;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    margin: 0;
+}
+
+:host ::ng-deep .p-accordioncontent-content ul {
+    padding-left: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+.acc-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.acc-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: inherit;
+}
+
+.acc-date {
+    font-size: 0.75rem;
+    color: #4d994d;
+}
+
+.exp-company {
+    font-size: 0.8rem;
+    color: #4d994d !important;
+    margin: 0 0 0.35rem 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Badge grids */
 .cert-grid {
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +190,7 @@
     font-family: 'Courier New', 'Lucida Console', monospace;
 }
 
+/* Education items */
 .experience-item {
     margin-bottom: 1rem;
 }
@@ -71,6 +201,7 @@
     margin: 0 0 0.25rem 0;
 }
 
+/* PGP */
 .pgp-key {
     text-align: center;
     margin-top: -0.5rem;
@@ -86,6 +217,7 @@
     text-decoration: underline;
 }
 
+/* ARG panel */
 .arg-panel {
     background: #0d0d0d;
     border: 1px solid #00ff41;
@@ -157,4 +289,3 @@
     font-size: 0.85rem;
     margin: 0.6rem 0 0 0;
 }
-

@@ -30,6 +30,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
+import { AccordionModule } from 'primeng/accordion';
 
 const TerminalGreen = definePreset(Lara, {
   semantic: {
@@ -91,7 +92,8 @@ const TerminalGreen = definePreset(Lara, {
     ButtonModule,
     TooltipModule,
     DividerModule,
-    CardModule
+    CardModule,
+    AccordionModule
   ],
   providers: [
     provideAnimationsAsync(),

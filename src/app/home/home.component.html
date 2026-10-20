@@ -35,126 +35,178 @@
 
         <p class="pgp-key"><a href="/connor-schuler-public.asc" target="_blank" rel="noopener noreferrer">🔑 PGP Public Key</a></p>
 
-        <p-divider />
+        <div class="main-grid">
+            <!-- Left column: Experience + Education -->
+            <div class="grid-col">
+                <p-divider />
+                <h3>Experience</h3>
+                <p-accordion [multiple]="true">
+                    <p-accordion-panel value="coach">
+                        <p-accordion-header>
+                            <div class="acc-header">
+                                <span class="acc-title">ITS Career Peer Coach</span>
+                                <span class="acc-date">Aug 2026 – Present</span>
+                            </div>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="exp-company">Champlain College Career Collaborative · Burlington, VT</p>
+                            <ul>
+                                <li>Provide personalized feedback and support to students regarding resumes, cover letters, and job applications</li>
+                                <li>Support Career Collaborative events contributing to student financial literacy, career development, and personal wellbeing</li>
+                                <li>Serve as a liaison between students and Career Collaborative staff, acting as first point of contact for career-related interactions</li>
+                            </ul>
+                        </p-accordion-content>
+                    </p-accordion-panel>
 
-        <h3>Skills</h3>
-        <div class="cert-grid">
-            <span class="cert-badge">Windows Server</span>
-            <span class="cert-badge">Linux Administration</span>
-            <span class="cert-badge">Active Directory</span>
-            <span class="cert-badge">Proxmox Virtualization</span>
-            <span class="cert-badge">Network Architecture</span>
-            <span class="cert-badge">Cisco IOS Configuration</span>
-            <span class="cert-badge">Network Troubleshooting</span>
-            <span class="cert-badge">SIEM/XDR</span>
-            <span class="cert-badge">Risk Assessment</span>
-            <span class="cert-badge">Bash Scripting</span>
-            <span class="cert-badge">Python Scripting</span>
-            <span class="cert-badge">Inventory Management</span>
+                    <p-accordion-panel value="fresenius">
+                        <p-accordion-header>
+                            <div class="acc-header">
+                                <span class="acc-title">IT Solutions Intern</span>
+                                <span class="acc-date">Jun – Aug 2026</span>
+                            </div>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="exp-company">Fresenius Medical Care · Waltham, MA</p>
+                            <ul>
+                                <li>Authored a report assessing operational technology (OT) security standards against the NIST 800-82 framework and identified gaps for remediation</li>
+                                <li>Monitored global regulatory bodies to track evolving cybersecurity laws, with a focus on EU member states' implementation of the NIS2 Directive</li>
+                                <li>Shadowed infrastructure leadership through a datacenter migration, gaining insight into enterprise-scale planning, risk management, and execution sequencing</li>
+                                <li>Built a Power Automate workflow to bulk-import Excel data into Microsoft SharePoint, eliminating manual entry of 350+ lines of data</li>
+                                <li>Developed a Python tool to compare an Oracle database against a Reltio MDM instance using rule-based checks and ML anomaly detection, with a severity ranking system visualized in Power BI</li>
+                            </ul>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+
+                    <p-accordion-panel value="leahy">
+                        <p-accordion-header>
+                            <div class="acc-header">
+                                <span class="acc-title">Risk Assessment Intern</span>
+                                <span class="acc-date">Sep – Dec 2025</span>
+                            </div>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="exp-company">The Leahy Center · Burlington, VT</p>
+                            <ul>
+                                <li>Assessed 10+ client cybersecurity policies against NIST-800-171 Revision 3 compliance standards, ensuring community cyber-readiness</li>
+                                <li>Authored detailed compliance reports and actionable remediation feedback based on assessment findings</li>
+                            </ul>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+
+                    <p-accordion-panel value="bestbuy">
+                        <p-accordion-header>
+                            <div class="acc-header">
+                                <span class="acc-title">Sales Associate &amp; Product Flow Specialist</span>
+                                <span class="acc-date">Aug 2023 – Present</span>
+                            </div>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="exp-company">Best Buy · Salem, NH</p>
+                            <ul>
+                                <li>Advise customers on product selection and complete point-of-sale transactions including sales, returns, and exchanges</li>
+                                <li>Manage receiving and storage for 3,000+ unit shipments while fulfilling online and in-store order fulfillment across high-volume periods</li>
+                            </ul>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+
+                    <p-accordion-panel value="unh">
+                        <p-accordion-header>
+                            <div class="acc-header">
+                                <span class="acc-title">HighTech Bound Intern</span>
+                                <span class="acc-date">Jul – Aug 2024</span>
+                            </div>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="exp-company">UNH InterOperability Lab · Durham, NH</p>
+                            <p>Collaborated with another intern to develop a full-stack web application for managing and viewing NVMe controller test data, utilizing the Angular framework and integrating with an existing JavaScript server and SQL database.</p>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+
+                    <p-accordion-panel value="pinkerton">
+                        <p-accordion-header>
+                            <div class="acc-header">
+                                <span class="acc-title">Lead Student Systems Administrator</span>
+                                <span class="acc-date">Dec 2022 – Jun 2025</span>
+                            </div>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="exp-company">Pinkerton Academy CIS · Derry, NH</p>
+                            <ul>
+                                <li>Designed, implemented, and documented new VRRP network architecture to improve network reliability</li>
+                                <li>Implemented new classroom services including SIEM/XDR, Zero Trust remote access, and a Proxmox hypervisor</li>
+                                <li>Developed $10k+ annual budgets based on classroom needs, keeping materials current with technology trends</li>
+                                <li>Trained and documented procedures for new student administrators to ensure smooth leadership transition</li>
+                            </ul>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+                </p-accordion>
+
+                <p-divider />
+                <h3>Education</h3>
+                <div class="experience-item">
+                    <h4>Champlain College</h4>
+                    <p class="exp-date">August 2025 – Expected June 2029 | Burlington, VT</p>
+                    <p>BS, Computer Networking &amp; Cybersecurity<br>BS, Computer &amp; Digital Forensics</p>
+                    <p>Cumulative GPA: 3.97 — President's List</p>
+                    <ul>
+                        <li>Second Year Representative, Student Government Association — reviews and approves club budgets and grants</li>
+                        <li>ITS Career Peer Coach — helps fellow students strengthen their resumes and job applications</li>
+                        <li>Active member of the Cybersecurity Club, Digital Forensics Association, and Free and Open Tech Collective</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h4>Pinkerton Academy</h4>
+                    <p class="exp-date">August 2021 – June 2025</p>
+                    <p>High School Diploma, Information Technology</p>
+                </div>
+            </div>
+
+            <!-- Right column: Photo, Skills, Certs, Honors -->
+            <div class="grid-col">
+                <p-divider />
+                <div class="profile-pic-wrap">
+                    <div class="profile-pic-circle">
+                        <img class="profile-pic" src="/profile.png" alt="Connor Schuler" (error)="$any($event.target.parentElement).style.display='none'" />
+                    </div>
+                </div>
+                <p-divider />
+                <h3>Skills</h3>
+                <div class="cert-grid">
+                    <span class="cert-badge">Windows Server</span>
+                    <span class="cert-badge">Linux Administration</span>
+                    <span class="cert-badge">Active Directory</span>
+                    <span class="cert-badge">Proxmox Virtualization</span>
+                    <span class="cert-badge">Network Architecture</span>
+                    <span class="cert-badge">Cisco IOS Configuration</span>
+                    <span class="cert-badge">Network Troubleshooting</span>
+                    <span class="cert-badge">SIEM/XDR</span>
+                    <span class="cert-badge">Risk Assessment</span>
+                    <span class="cert-badge">Bash Scripting</span>
+                    <span class="cert-badge">Python Scripting</span>
+                    <span class="cert-badge">Inventory Management</span>
+                </div>
+
+                <p-divider />
+                <h3>Certifications</h3>
+                <div class="cert-grid">
+                    <span class="cert-badge" pTooltip="Demonstrated general IT knowledge.">ITF Pro</span>
+                    <span class="cert-badge" pTooltip="Demonstrated knowledge of Windows and Mac systems.">PC Pro</span>
+                    <span class="cert-badge" pTooltip="Demonstrated knowledge of the Linux command line.">Linux Pro</span>
+                    <span class="cert-badge" pTooltip="Demonstrated knowledge of ethical hacking techniques.">Ethical Hacker Pro</span>
+                    <span class="cert-badge" pTooltip="Demonstrated knowledge of cybersecurity concepts and defense.">CyberDefense Pro</span>
+                    <span class="cert-badge" pTooltip="Cisco Certified Support Technician - Networking">CCST Networking</span>
+                </div>
+
+                <p-divider />
+                <h3>Honors &amp; Awards</h3>
+                <ul>
+                    <li>SkillsUSA National Top 15 — Internetworking</li>
+                    <li>SkillsUSA State Level 2nd Place — Information Technology Systems</li>
+                    <li>Outstanding Student Award — Computer Information Systems</li>
+                    <li>Eagle Scout - Scouting America Troop 33 Hampstead</li>
+                    <li>2026 Elevator Pitch Finalist — Advocate Category</li>
+                </ul>
+            </div>
         </div>
-
-        <p-divider />
-
-        <h3>Education</h3>
-        <div class="experience-item">
-            <h4>Champlain College</h4>
-            <p class="exp-date">August 2025 – Expected June 2029 | Burlington, VT</p>
-            <p>BS, Computer Networking &amp; Cybersecurity<br>BS, Computer &amp; Digital Forensics</p>
-            <p>Cumulative GPA: 3.97 — President's List</p>
-            <ul>
-                <li>Second Year Representative, Student Government Association — reviews and approves club budgets and grants</li>
-                <li>ITS Career Peer Coach — helps fellow students strengthen their resumes and job applications</li>
-                <li>Active member of the Cybersecurity Club, Digital Forensics Association, and Free and Open Tech Collective</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <h4>Pinkerton Academy</h4>
-            <p class="exp-date">August 2021 – June 2025</p>
-            <p>High School Diploma, Information Technology</p>
-        </div>
-
-        <p-divider />
-
-        <h3>Experience</h3>
-
-        <div class="experience-item">
-            <h4>ITS Career Peer Coach — Champlain College Career Collaborative</h4>
-            <p class="exp-date">August 2026 – Present | Burlington, VT</p>
-            <ul>
-                <li>Provide personalized feedback and support to students regarding resumes, cover letters, and job applications</li>
-                <li>Support Career Collaborative events contributing to student financial literacy, career development, and personal wellbeing</li>
-                <li>Serve as a liaison between students and Career Collaborative staff, acting as first point of contact for career-related interactions</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>IT Solution Intern — Fresenius Medical Care</h4>
-            <p class="exp-date">June 2026 – August 2026 | Waltham, MA</p>
-            <ul>
-                <li>Authored a report assessing operational technology (OT) security standards against the NIST 800-82 framework and identified gaps for remediation</li>
-                <li>Monitored global regulatory bodies to track evolving cybersecurity laws, with a focus on EU member states' implementation of the NIS2 Directive</li>
-                <li>Shadowed infrastructure leadership through a datacenter migration, gaining insight into enterprise-scale planning, risk management, and execution sequencing</li>
-                <li>Built a Power Automate workflow to bulk-import Excel data into Microsoft SharePoint, eliminating manual entry of 350+ lines of data</li>
-                <li>Developed a Python tool to compare an Oracle database against a Reltio MDM instance using rule-based checks and ML anomaly detection, with a severity ranking system visualized in Power BI</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>Risk Assessment Intern — The Leahy Center</h4>
-            <p class="exp-date">September 2025 – December 2025 | Burlington, VT</p>
-            <ul>
-                <li>Assessed 10+ client cybersecurity policies against NIST-800-171 Revision 3 compliance standards, ensuring community cyber-readiness</li>
-                <li>Authored detailed compliance reports and actionable remediation feedback based on assessment findings</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>Sales Associate &amp; Product Flow Specialist — Best Buy</h4>
-            <p class="exp-date">August 2023 – Present | Salem, NH</p>
-            <ul>
-                <li>Advise customers on product selection and complete point-of-sale transactions including sales, returns, and exchanges</li>
-                <li>Manage receiving and storage for 3,000+ unit shipments while fulfilling online and in-store order fulfillment across high-volume periods</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>HighTech Bound Intern — UNH InterOperability Lab</h4>
-            <p class="exp-date">July 2024 – August 2024 | Durham, NH</p>
-            <p>Collaborated with another intern to develop a full-stack web application for managing and viewing NVMe controller test data, utilizing the Angular framework and integrating with an existing JavaScript server and SQL database.</p>
-        </div>
-
-        <div class="experience-item">
-            <h4>Lead Student Systems Administrator — Pinkerton Academy CIS</h4>
-            <p class="exp-date">December 2022 – June 2025 | Derry, NH</p>
-            <ul>
-                <li>Designed, implemented, and documented new VRRP network architecture to improve network reliability</li>
-                <li>Implemented new classroom services including SIEM/XDR, Zero Trust remote access, and a Proxmox hypervisor</li>
-                <li>Developed $10k+ annual budgets based on classroom needs, keeping materials current with technology trends</li>
-                <li>Trained and documented procedures for new student administrators to ensure smooth leadership transition</li>
-            </ul>
-        </div>
-
-        <p-divider />
-
-        <h3>Certifications</h3>
-        <div class="cert-grid">
-            <span class="cert-badge" pTooltip="Demonstrated general IT knowledge.">ITF Pro</span>
-            <span class="cert-badge" pTooltip="Demonstrated knowledge of Windows and Mac systems.">PC Pro</span>
-            <span class="cert-badge" pTooltip="Demonstrated knowledge of the Linux command line.">Linux Pro</span>
-            <span class="cert-badge" pTooltip="Demonstrated knowledge of ethical hacking techniques.">Ethical Hacker Pro</span>
-            <span class="cert-badge" pTooltip="Demonstrated knowledge of cybersecurity concepts and defense.">CyberDefense Pro</span>
-            <span class="cert-badge" pTooltip="Cisco Certified Support Technician - Networking">CCST Networking</span>
-        </div>
-
-        <p-divider />
-
-        <h3>Honors &amp; Awards</h3>
-        <ul>
-            <li>SkillsUSA National Top 15 — Internetworking</li>
-            <li>SkillsUSA State Level 2nd Place — Information Technology Systems</li>
-            <li>2026 Elevator Pitch Finalist — Advocate Category</li>
-            <li>Outstanding Student Award — Computer Information Systems</li>
-            <li>Eagle Scout</li>
-        </ul>
     </div>
 </div>
