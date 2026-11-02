@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ResumeComponent } from './resume/resume.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { VoidComponent } from './arg/void/void.component';
@@ -19,7 +20,15 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Connor Schuler — Networking & Cybersecurity Student',
-      description: 'Connor Schuler is a Champlain College student studying Computer Networking & Cybersecurity and Computer & Digital Forensics. Background, certifications, experience, and projects.',
+      description: 'Connor Schuler is a Champlain College student studying Computer Networking & Cybersecurity and Computer & Digital Forensics. A timeline of the projects, internships, and writing that got him here.',
+    },
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent,
+    data: {
+      title: 'Résumé — Connor Schuler',
+      description: 'Experience, education, skills, certifications, and honors for Connor Schuler, a Champlain College student in Computer Networking & Cybersecurity and Computer & Digital Forensics.',
     },
   },
   {

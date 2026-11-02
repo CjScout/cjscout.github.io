@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ResumeComponent } from './resume/resume.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 
@@ -75,6 +76,7 @@ const TerminalGreen = definePreset(Lara, {
     HomeComponent,
     ErrorPageComponent,
     ProjectsComponent,
+    ResumeComponent,
     BlogComponent,
     BlogPostComponent,
     IntroModalComponent,
