@@ -65,6 +65,13 @@
     color: #0a0a0a;
 }
 
+.contact-note {
+    color: #66b366;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin: 0.75rem 0 0;
+}
+
 .portrait {
     aspect-ratio: 4 / 5;
     overflow: hidden;

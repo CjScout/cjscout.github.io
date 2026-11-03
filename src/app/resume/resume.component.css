@@ -201,19 +201,24 @@
     margin: 0 0 0.25rem 0;
 }
 
-/* PGP */
-.pgp-key {
+/* Contact */
+.contact {
     text-align: center;
     margin-top: -0.5rem;
 }
 
-.pgp-key a {
+.contact a {
     color: #00ff41;
     font-size: 0.9rem;
     text-decoration: none;
 }
 
-.pgp-key a:hover {
+.contact a:hover {
     text-decoration: underline;
+}
+
+.contact span {
+    color: #4d994d;
+    font-size: 0.8rem;
 }
 
